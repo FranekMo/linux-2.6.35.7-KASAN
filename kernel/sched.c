@@ -641,7 +641,7 @@ static inline struct task_group *task_group(struct task_struct *p)
 
 #endif /* CONFIG_CGROUP_SCHED */
 
-inline void update_rq_clock(struct rq *rq)
+void update_rq_clock(struct rq *rq)
 {
 	if (!rq->skip_clock_update)
 		rq->clock = sched_clock_cpu(cpu_of(rq));
